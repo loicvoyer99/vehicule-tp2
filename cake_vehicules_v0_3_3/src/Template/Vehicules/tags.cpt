@@ -1,0 +1,17 @@
+<h1>
+    Vehicules avec les tags
+    <?= $this->Text->toList(h($tags), 'ou') ?>
+</h1>
+
+<section>
+<?php foreach ($vehicules as $vehicule): ?>
+    <vehicule>
+        <!-- Utilisation du HtmlHelper pour créer le lien -->
+        <h4><?= $this->Html->link(
+            $vehicule->modele,
+            ['controller' => 'Vehicules', 'action' => 'view', $vehicule->slug]
+        ) ?></h4>
+        <span><?= h($vehicule->created) ?>
+    </vehicule>
+<?php endforeach; ?>
+</section>

@@ -1,0 +1,560 @@
+2019-08-28 15:49:19 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehicule.tags' doesn't exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 133
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'tags', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('tags', Array)
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('tags')
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'tags', 'Tags')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Tags')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Tags')
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Tags', 0)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('tags')
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehicule.tags' doesn't exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(131): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'tags', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('tags', Array)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('tags')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'tags', 'Tags')
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Tags')
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Tags')
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Tags', 0)
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('tags')
+#20 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\UniServerZ\www\vehicules\cake_vehicules_v0_0_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
+2019-10-02 01:03:51 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehicule.apropos' doesn't exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 133
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'apropos', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('apropos', Array)
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('apropos')
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'apropos', 'Apropos')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Apropos')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Apropos')
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Apropos', 0)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('apropos')
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehicule.apropos' doesn't exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(131): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'apropos', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('apropos', Array)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('apropos')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'apropos', 'Apropos')
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Apropos')
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Apropos')
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Apropos', 0)
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('apropos')
+#20 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
+2019-10-02 01:04:17 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehicule.apropos' doesn't exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 133
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'apropos', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('apropos', Array)
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('apropos')
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'apropos', 'Apropos')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Apropos')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Apropos')
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Apropos', 0)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('apropos')
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehicule.apropos' doesn't exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(131): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'apropos', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('apropos', Array)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('apropos')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'apropos', 'Apropos')
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Apropos')
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Apropos')
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Apropos', 0)
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('apropos')
+#20 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
+2019-10-02 01:08:24 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehicule.apropos' doesn't exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 133
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'apropos', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('apropos', Array)
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('apropos')
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('apropos')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehicule.apropos' doesn't exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(131): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'apropos', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('apropos', Array)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('apropos')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('apropos')
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_9\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#19 {main}
+
+
+2019-10-04 15:14:59 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: vehicules.id in C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 317
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(317): PDOStatement->execute(Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(193): Phinx\Db\Adapter\PdoAdapter->bulkinsert(Object(Phinx\Db\Table\Table), Array)
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\TimedOutputAdapter.php(127): Phinx\Db\Adapter\AdapterWrapper->bulkinsert(Object(Phinx\Db\Table\Table), Array)
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(193): Phinx\Db\Adapter\TimedOutputAdapter->bulkinsert(Object(Phinx\Db\Table\Table), Array)
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(655): Phinx\Db\Adapter\AdapterWrapper->bulkinsert(Object(Phinx\Db\Table\Table), Array)
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(627): Phinx\Db\Table->saveData()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(685): Phinx\Db\Table->update()
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\config\Seeds\VehiculesSeed.php(70): Phinx\Db\Table->save()
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(158): VehiculesSeed->run()
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(421): Phinx\Migration\Manager\Environment->executeSeed(Object(VehiculesSeed))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(564): Phinx\Migration\Manager->executeSeed('default', Object(VehiculesSeed))
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\robmorgan\phinx\src\Phinx\Console\Command\SeedRun.php(115): Phinx\Migration\Manager->seed('default', 'VehiculesSeed')
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\SeedRun->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\cakephp\migrations\src\Command\Seed.php(72): Migrations\Command\Seed->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Seed->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Seed), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'seed')
+#20 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#21 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#22 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#23 C:\UniServerZ\www\vehicules\cake_vehicules_v0_1_10\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#24 {main}
+
+
+2019-10-04 17:07:55 Error: [Cake\Database\Exception] Cannot describe emails. It has 0 columns. in C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 101
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('emails', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('emails')
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('emails')
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#10 {main}
+
+
+2019-10-09 16:21:10 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver.php on line 92
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver.php(92): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\Database\Driver\Mysql->connect()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(275): Cake\Database\Driver\Mysql->prepare(Object(Cake\Database\Query))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(282): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Connection->prepare(Object(Cake\Database\Query))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#19 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#20 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2019-10-09 16:22:19 Error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php on line 127
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(136): Phinx\Db\Adapter\MysqlAdapter->connect()
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(489): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(74): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#17 {main}
+
+
+2019-10-09 16:22:40 Error: [PDOException] SQLSTATE[HY000]: General error: 1 no such table: i18ns in C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php on line 107
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php(107): PDO->prepare('SELECT * FROM i...')
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(275): Cake\Database\Driver\Sqlite->prepare(Object(Cake\Database\Query))
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(282): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Connection->prepare(Object(Cake\Database\Query))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#19 {main}
+
+
+2019-10-09 16:23:15 Error: [PDOException] SQLSTATE[HY000]: General error: 1 no such table: i18ns in C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php on line 107
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php(107): PDO->prepare('SELECT * FROM i...')
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(275): Cake\Database\Driver\Sqlite->prepare(Object(Cake\Database\Query))
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(282): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Connection->prepare(Object(Cake\Database\Query))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#19 {main}
+
+
+2019-10-09 16:23:30 Error: [InvalidArgumentException] The seed class "ArticlesSeed" does not exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php on line 566
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\robmorgan\phinx\src\Phinx\Console\Command\SeedRun.php(115): Phinx\Migration\Manager->seed('default', 'ArticlesSeed')
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\SeedRun->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Command\Seed.php(72): Migrations\Command\Seed->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Seed->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Seed), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'seed')
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+2019-10-09 16:24:03 Error: [InvalidArgumentException] The seed class "ArticlesSeed" does not exist in C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php on line 566
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\robmorgan\phinx\src\Phinx\Console\Command\SeedRun.php(115): Phinx\Migration\Manager->seed('default', 'ArticlesSeed')
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\SeedRun->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Command\Seed.php(72): Migrations\Command\Seed->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Seed->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Seed), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'seed')
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+2019-10-09 16:24:06 Error: [PDOException] SQLSTATE[HY000]: General error: 1 no such table: i18ns in C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php on line 107
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php(107): PDO->prepare('SELECT * FROM i...')
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(275): Cake\Database\Driver\Sqlite->prepare(Object(Cake\Database\Query))
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(282): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Connection->prepare(Object(Cake\Database\Query))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#19 {main}
+
+
+2019-10-09 16:24:09 Error: [PDOException] SQLSTATE[HY000]: General error: 1 no such table: i18ns in C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php on line 107
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php(107): PDO->prepare('SELECT * FROM i...')
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(275): Cake\Database\Driver\Sqlite->prepare(Object(Cake\Database\Query))
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(282): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Connection->prepare(Object(Cake\Database\Query))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#14 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#15 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#16 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#17 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#18 C:\UniServerZ\www\vehicules\cake_vehicules_v0_2_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#19 {main}
+
+
+2019-11-01 16:18:39 Error: [Cake\Database\Exception] Cannot describe sub_defectuosites. It has 0 columns. in C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 101
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sub_defectuosit...', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('sub_defectuosit...')
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sub_defectuosit...', 'SubDefectuosite...')
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('SubDefectuosite...')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('SubDefectuosite...')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('SubDefectuosite...', 0)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('subDefectuosite...')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-01 16:19:29 Error: [Cake\Database\Exception] Cannot describe sub_defectuosites. It has 0 columns. in C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 101
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sub_defectuosit...', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('sub_defectuosit...')
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sub_defectuosit...', 'SubDefectuosite...')
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('SubDefectuosite...')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('SubDefectuosite...')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('SubDefectuosite...', 0)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('subDefectuosite...')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-01 16:20:05 Error: [Cake\Database\Exception] Cannot describe sub_defectuosites. It has 0 columns. in C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 101
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sub_defectuosit...', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('sub_defectuosit...')
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sub_defectuosit...', 'SubDefectuosite...')
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('SubDefectuosite...')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('SubDefectuosite...')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('SubDefectuosite...', 0)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('subDefectuosite...')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-01 16:21:35 Error: [Cake\Database\Exception] Cannot describe sub_categories. It has 0 columns. in C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 101
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sub_categories', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('sub_categories')
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sub_categories', 'SubCategories')
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('SubCategories')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('SubCategories')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('SubCategories', 0)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('subCategories')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-01 16:22:10 Error: [Cake\Database\Exception] Cannot describe sub_defectuosites. It has 0 columns. in C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 101
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sub_defectuosit...', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('sub_defectuosit...')
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sub_defectuosit...', 'SubDefectuosite...')
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('SubDefectuosite...')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('SubDefectuosite...')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('SubDefectuosite...', 0)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('subDefectuosite...')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-01 16:22:42 Error: [Cake\Database\Exception] Cannot describe sub_defectuosites. It has 0 columns. in C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 101
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sub_defectuosit...', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('sub_defectuosit...')
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sub_defectuosit...', 'SubDefectuosite...')
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('SubDefectuosite...')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('SubDefectuosite...')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('SubDefectuosite...', 0)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('subDefectuosite...')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-01 16:25:04 Error: [Cake\Database\Exception] Cannot describe sub_defectuosites. It has 0 columns. in C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 101
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sub_defectuosit...', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('sub_defectuosit...')
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sub_defectuosit...', 'SubDefectuosite...')
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('SubDefectuosite...')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('SubDefectuosite...')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('SubDefectuosite...', 0)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('subDefectuosite...')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-01 16:30:15 Error: [Cake\Database\Exception] Cannot describe sub_defectuosites. It has 0 columns. in C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 101
+Stack Trace:
+#0 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sub_defectuosit...', Array)
+#1 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('sub_defectuosit...')
+#2 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#3 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#4 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sub_defectuosit...', 'SubDefectuosite...')
+#6 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('SubDefectuosite...')
+#7 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('SubDefectuosite...')
+#8 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('SubDefectuosite...', 0)
+#9 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('subDefectuosite...')
+#11 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\UniServerZ\www\vehicules\cake_vehicules_v0_3_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
